@@ -25,6 +25,10 @@ class EventListFragment : BaseFragment<FragmentEventListBinding, EventListViewMo
         EventListAdapter()
     }
 
+    companion object{
+        const val EVENT_REQUEST_DELAY = 10000L
+    }
+
     private var repeatingJob: Job? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -56,7 +60,7 @@ class EventListFragment : BaseFragment<FragmentEventListBinding, EventListViewMo
         repeatingJob = viewLifecycleOwner.lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 while (true) {
-                    delay(10000)
+                    delay(EVENT_REQUEST_DELAY)
                     viewModel.getEventList()
                 }
             }

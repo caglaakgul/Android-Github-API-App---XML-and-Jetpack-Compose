@@ -11,7 +11,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class EventDetailViewModel @Inject constructor(private val repository: EventsRepository): BaseViewModel() {
-    private val _repositoryUrl = MutableStateFlow<String>("")
+    private val _repositoryUrl = MutableStateFlow("")
     val repositoryUrl: StateFlow<String> = _repositoryUrl
 
     private val _event = MutableStateFlow<Event?>(null)
@@ -23,10 +23,10 @@ class EventDetailViewModel @Inject constructor(private val repository: EventsRep
         getRepository(owner, repo)
     }
 
-    fun getRepository(owner: String, repo: String){
+    private fun getRepository(owner: String, repo: String){
         launchVMScope(repository.getRepository(owner, repo)) { response ->
             response?.let { repo ->
-                _repositoryUrl.value = repo.htmlUrl ?: ""
+                _repositoryUrl.value = repo.htmlUrl
             }
         }
     }

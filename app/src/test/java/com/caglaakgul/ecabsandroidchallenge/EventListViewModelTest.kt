@@ -28,6 +28,4 @@ class EventListViewModelTest {
     fun setup() {
         viewModel = EventListViewModel(eventsRepository)
     }
-
-
 }

@@ -17,7 +17,6 @@ import com.caglaakgul.ecabsandroidchallenge.R
 import com.caglaakgul.ecabsandroidchallenge.ui.helper.SafeClickListener
 import com.google.android.material.card.MaterialCardView
 import java.text.SimpleDateFormat
-import java.util.Locale
 import java.util.*
 
 fun Boolean?.ifTrue(block: () -> Unit) {
@@ -47,7 +46,7 @@ fun MaterialCardView.setSequentialBackgroundColor(position: Int, context: Contex
         ContextCompat.getColor(context, R.color.purple),
     )
     val index = position % colors.size
-    setBackgroundColor(colors[index])
+    setCardBackgroundColor(colors[index])
 }
 
 fun View.safeClickListener(
