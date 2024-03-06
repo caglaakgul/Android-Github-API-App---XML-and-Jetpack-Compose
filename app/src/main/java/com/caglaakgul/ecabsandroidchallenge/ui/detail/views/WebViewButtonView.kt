@@ -19,7 +19,7 @@ fun WebViewButton(url: String) {
 
     if (url.isNotEmpty()) {
         ButtonView(
-            text = "Go to Repositoru",
+            text = "Go to Repository",
             onClick = {
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
                 openUrl.launch(intent)
