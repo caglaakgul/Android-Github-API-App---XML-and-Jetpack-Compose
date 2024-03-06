@@ -32,9 +32,6 @@ The project consists of two main screens: List and Detail. The List screen is po
 3. Install the necessary dependencies.
 4. Run the project on an emulator or real device.
 
-## Contribution
-
-If you would like to contribute, please feel free to submit a pull request or open an issue. Any contributions and feedback are highly appreciated.
 
 ## License
 
