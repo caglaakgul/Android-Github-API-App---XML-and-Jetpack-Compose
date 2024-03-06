@@ -13,10 +13,6 @@ class EventListViewModel @Inject constructor(private val repository: EventsRepos
 
     val eventListLiveData = MutableLiveData<List<Event>>()
 
-    init {
-        getEventList()
-    }
-
      fun getEventList() {
         launchVMScope(repository.getEventList()) { response ->
             response?.let { events ->
