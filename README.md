@@ -27,7 +27,7 @@ The project consists of two main screens: List and Detail. The List screen is po
 
 ## How to Run
 
-1. Clone this project.
+1. Clone this project or just download the zip file.
 2. Open the project in Android Studio.
 3. Install the necessary dependencies.
 4. Run the project on an emulator or real device.
