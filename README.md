@@ -1,9 +1,5 @@
 # # ECabs Android App Challenge
 
-![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/yourrepositoryname)
-![GitHub language count](https://img.shields.io/github/languages/count/yourusername/yourrepositoryname)
-![GitHub top language](https://img.shields.io/github/languages/top/yourusername/yourrepositoryname)
-
 This project is developed in Kotlin using both XML and Jetpack Compose. It follows the MVVM design pattern and is tailored for the Android platform.
 
 ## Project Description
