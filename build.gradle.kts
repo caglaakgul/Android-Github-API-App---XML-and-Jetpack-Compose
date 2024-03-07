@@ -13,6 +13,5 @@ buildscript{
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31")
         classpath("com.google.dagger:hilt-android-gradle-plugin:2.48")
         classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.7.7")
-        classpath("com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.1")
     }
 }

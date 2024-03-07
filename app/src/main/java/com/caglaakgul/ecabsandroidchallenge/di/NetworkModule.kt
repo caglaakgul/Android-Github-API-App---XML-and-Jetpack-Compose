@@ -1,9 +1,9 @@
 package com.caglaakgul.ecabsandroidchallenge.di
 
-import com.caglaakgul.ecabsandroidchallenge.BuildConfig
 import com.caglaakgul.ecabsandroidchallenge.data.remote.ApiService
 import com.caglaakgul.ecabsandroidchallenge.data.remote.HttpTokenInterceptor
 import com.caglaakgul.ecabsandroidchallenge.data.remote.NetworkConnectionInterceptor
+import com.caglaakgul.ecabsandroidchallenge.helper.BASE_URL
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -47,7 +47,7 @@ class NetworkModule {
     @Provides
     fun provideRetrofit(gson: Gson, httpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(BuildConfig.BASE_URL)
+            .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .client(httpClient)
             .build()

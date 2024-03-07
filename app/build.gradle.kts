@@ -7,7 +7,6 @@ plugins {
     id("androidx.navigation.safeargs")
     id("com.google.dagger.hilt.android")
     id("kotlin-parcelize")
-    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
 
 android {
@@ -49,7 +48,6 @@ android {
     }
     buildFeatures {
         viewBinding = true
-        buildConfig = true
         dataBinding = true
         compose = true
     }
