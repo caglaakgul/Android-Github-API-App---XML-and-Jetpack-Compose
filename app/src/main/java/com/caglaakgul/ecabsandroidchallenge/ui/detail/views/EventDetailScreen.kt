@@ -25,11 +25,13 @@ import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.caglaakgul.ecabsandroidchallenge.ui.detail.EventDetailViewModel
 import com.caglaakgul.ecabsandroidchallenge.extension.formatDateTime
+import com.caglaakgul.ecabsandroidchallenge.extension.splitStringBySlash
 
 @Composable
 fun EventDetailScreen(viewModel: EventDetailViewModel) {
     val event by viewModel.event.collectAsState()
     val repositoryUrl by viewModel.repositoryUrl.collectAsState()
+    val (_, repoName) = event?.repo?.name?.splitStringBySlash() ?: Pair("", "")
 
     Surface(color = MaterialTheme.colors.background) {
         Box(
@@ -73,7 +75,7 @@ fun EventDetailScreen(viewModel: EventDetailViewModel) {
                     )
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(
-                        text = "Repository Name: ${event?.repo?.name ?: ""}",
+                        text = "Repository Name: $repoName",
                         style = MaterialTheme.typography.body1,
                         color = Color.Gray
                     )

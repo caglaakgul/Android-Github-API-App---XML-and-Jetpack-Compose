@@ -10,17 +10,13 @@ import java.util.concurrent.atomic.AtomicBoolean
 class SingleLiveEvent<T> : MutableLiveData<T>() {
 
     companion object {
-
         private val TAG = "SingleLiveEvent"
     }
 
     private val pending: AtomicBoolean = AtomicBoolean(false)
 
-
     @MainThread
     override fun observe(owner: LifecycleOwner, observer: Observer<in T>) {
-
-
         if (hasActiveObservers()) {
             Log.w(TAG, "Multiple Observers ,,,")
         }
@@ -30,7 +26,6 @@ class SingleLiveEvent<T> : MutableLiveData<T>() {
                 observer.onChanged(t)
             }
         }
-
     }
 
     @MainThread

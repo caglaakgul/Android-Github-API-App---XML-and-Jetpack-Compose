@@ -20,8 +20,6 @@ android {
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -42,7 +40,6 @@ android {
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
-        //kotlinCompilerExtensionVersion = Versions.COMPOSE
     }
     packaging {
         resources {
@@ -76,10 +73,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
-    androidTestImplementation(platform("androidx.compose:compose-bom:2023.03.00"))
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
-    debugImplementation("androidx.compose.ui:ui-test-manifest")
     implementation("androidx.compose.material:material-icons-core:1.6.2")
     implementation("androidx.compose.material:material-icons-extended:1.6.2")
     implementation("androidx.constraintlayout:constraintlayout-compose:1.1.0-alpha13")
@@ -109,26 +103,8 @@ dependencies {
     implementation("androidx.work:work-runtime-ktx:2.9.0")
     kapt("com.google.dagger:hilt-android-compiler:2.48")
     kapt("androidx.hilt:hilt-compiler:1.2.0")
-
-    implementation("com.google.dagger:hilt-android:2.49")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
-    implementation("androidx.hilt:hilt-work:1.2.0")
-    kapt("androidx.hilt:hilt-compiler:1.2.0")
 
     //RecyclerView
     implementation("androidx.recyclerview:recyclerview:1.3.2")
-
-    //Test
-    testImplementation("io.mockk:mockk:1.12.5")
-    testImplementation("org.robolectric:robolectric:4.8.1")
-    testImplementation ("junit:junit:4.13.2")
-    testImplementation ("androidx.arch.core:core-testing:2.2.0")
-    testImplementation ("androidx.test:core:1.5.0")
-    testImplementation ("com.google.dagger:hilt-android-testing:2.30.1-alpha")
-    testImplementation ("com.google.dagger:hilt-compiler:2.48")
-    testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
-    testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
-    androidTestImplementation ("androidx.test:runner:1.5.2")
-    androidTestImplementation ("androidx.test.espresso:espresso-core:3.5.1")
-    testImplementation ("org.assertj:assertj-core:3.21.0")
 }

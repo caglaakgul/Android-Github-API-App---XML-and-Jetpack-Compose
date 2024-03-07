@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">ECabs Android Challenge</string>
     <string name="action_settings">Settings</string>
-    <string name="event_list_fragment_label">Event List Fragment</string>
-    <string name="event_detail_fragment_label">Event Detail Fragment</string>
+    <string name="event_list_fragment_label">Event List</string>
+    <string name="event_detail_fragment_label">Event Detail</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="offline_text">Please check your connection!</string>
-    <string name="message_error_unknown_error">message_error_unknown_error</string>
-    <string name="message_error_service_unavailable">message_error_service_unavailable</string>
+    <string name="message_error_unknown_error">Unknown Error</string>
+    <string name="message_error_service_unavailable">Service Unavailable</string>
 </resources>
