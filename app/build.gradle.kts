@@ -19,6 +19,7 @@ android {
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
+        testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -29,6 +30,7 @@ android {
                 "proguard-rules.pro"
             )
         }
+
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -72,10 +74,10 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
     debugImplementation("androidx.compose.ui:ui-tooling")
-    implementation("androidx.compose.material:material-icons-core:1.6.2")
-    implementation("androidx.compose.material:material-icons-extended:1.6.2")
+    implementation("androidx.compose.material:material-icons-core:1.6.3")
+    implementation("androidx.compose.material:material-icons-extended:1.6.3")
     implementation("androidx.constraintlayout:constraintlayout-compose:1.1.0-alpha13")
-    implementation("androidx.compose.material:material:1.6.2")
+    implementation("androidx.compose.material:material:1.6.3")
 
     //Retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
@@ -105,4 +107,17 @@ dependencies {
 
     //RecyclerView
     implementation("androidx.recyclerview:recyclerview:1.3.2")
+
+    //test
+    testImplementation ("junit:junit:4.13.2")
+    testImplementation ("io.mockk:mockk:1.12.5")
+    testImplementation ("org.robolectric:robolectric:4.8.1")
+    testImplementation ("androidx.arch.core:core-testing:2.2.0")
+    testImplementation ("androidx.test:core:1.5.0")
+    testImplementation ("com.google.dagger:hilt-android-testing:2.30.1-alpha")
+    testImplementation("com.google.dagger:hilt-compiler:2.48")
+    testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
+    androidTestImplementation ("androidx.test:runner:1.5.2")
+    androidTestImplementation ("androidx.test.espresso:espresso-core:3.5.1")
 }

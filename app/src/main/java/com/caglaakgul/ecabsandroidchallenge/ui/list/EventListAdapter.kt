@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.caglaakgul.ecabsandroidchallenge.base.SingleListAdapter
 import com.caglaakgul.ecabsandroidchallenge.data.model.Event
 import com.caglaakgul.ecabsandroidchallenge.databinding.ItemEventListBinding
-import com.caglaakgul.ecabsandroidchallenge.extension.formatDateTime
+import com.caglaakgul.ecabsandroidchallenge.extension.formatDate
 import com.caglaakgul.ecabsandroidchallenge.extension.safeClickListener
 import com.caglaakgul.ecabsandroidchallenge.extension.setSequentialBackgroundColor
 
@@ -48,7 +48,7 @@ class EventListAdapter : ListAdapter<Event, EventListAdapter.EventListViewHolder
                 binding.root.context
             )
             binding.tvName.text = item.actor?.login
-            binding.tvDate.text = item.createdAt.formatDateTime()
+            binding.tvDate.text = item.createdAt.formatDate()
         }
     }
 }

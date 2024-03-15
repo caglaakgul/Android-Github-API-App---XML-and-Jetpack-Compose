@@ -72,9 +72,9 @@ fun String.splitStringBySlash(): Pair<String, String> {
     return Pair(beforeSlash, afterSlash)
 }
 
-fun String.formatDateTime(): String {
-    val inputFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
-    val outputFormat = SimpleDateFormat("dd.MM.yyyy", Locale.getDefault())
-    val date: Date? = inputFormat.parse(this)
-    return date?.let { outputFormat.format(it) } ?: ""
+fun String.formatDate(): String {
+    val input = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
+    val output = SimpleDateFormat("dd.MM.yyyy", Locale.getDefault())
+    val date: Date? = input.parse(this)
+    return date?.let { output.format(it) } ?: ""
 }

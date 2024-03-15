@@ -24,7 +24,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.caglaakgul.ecabsandroidchallenge.ui.detail.EventDetailViewModel
-import com.caglaakgul.ecabsandroidchallenge.extension.formatDateTime
+import com.caglaakgul.ecabsandroidchallenge.extension.formatDate
 import com.caglaakgul.ecabsandroidchallenge.extension.splitStringBySlash
 
 @Composable
@@ -69,7 +69,7 @@ fun EventDetailScreen(viewModel: EventDetailViewModel) {
                     )
                     Spacer(modifier = Modifier.height(8.dp))
                     Text(
-                        text = "Created Date: ${event?.createdAt?.formatDateTime() ?: ""}",
+                        text = "Created Date: ${event?.createdAt?.formatDate() ?: ""}",
                         style = MaterialTheme.typography.body1,
                         color = Color.Gray
                     )
