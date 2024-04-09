@@ -1,4 +1,4 @@
-# # ECabs Android App Challenge
+# # Github API Android App
 
 This project is developed in Kotlin using both XML and Jetpack Compose. It follows the MVVM design pattern and is tailored for the Android platform.
 
